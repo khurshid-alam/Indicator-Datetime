@@ -1,3 +1,9 @@
+indicator-datetime (15.10+17.04.20170322-0ubuntu3) artful; urgency=medium
+
+  * Drop language-pack-touch-en build dependency.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 18 May 2017 12:03:54 +0100
+
 indicator-datetime (15.10+17.04.20170322-0ubuntu2) zesty; urgency=medium
 
   * No-change rebuild (LP: #1681870).

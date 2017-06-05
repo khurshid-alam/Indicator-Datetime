@@ -27,7 +27,7 @@ Build-Depends: cmake,
                python3-dbusmock,
 # for 12h/24h locale unit tests:
                locales,
-               language-pack-touch-en | language-pack-en-base,
+               language-pack-en-base,
 # for running live EDS tests:
                evolution-data-server,
                gvfs-daemons,
