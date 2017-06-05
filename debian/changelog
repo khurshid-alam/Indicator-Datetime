@@ -1,3 +1,9 @@
+indicator-datetime (15.10+17.04.20170322-0ubuntu2) zesty; urgency=medium
+
+  * No-change rebuild (LP: #1681870).
+
+ -- Åukasz 'sil2100' Zemczak <lukasz.zemczak@ubuntu.com>  Tue, 11 Apr 2017 17:32:50 +0100
+
 indicator-datetime (15.10+17.04.20170322-0ubuntu1) zesty; urgency=medium
 
   * no change rebuild
