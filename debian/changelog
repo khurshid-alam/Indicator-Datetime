@@ -1,8 +1,9 @@
-indicator-datetime (15.10+17.04.20170322-0ubuntu3) artful; urgency=medium
+indicator-datetime (15.10+17.10.20170606-0ubuntu1) artful; urgency=medium
 
+  [ Dimitri John Ledkov ]
   * Drop language-pack-touch-en build dependency.
 
- -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 18 May 2017 12:03:54 +0100
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 06 Jun 2017 01:05:07 +0000
 
 indicator-datetime (15.10+17.04.20170322-0ubuntu2) zesty; urgency=medium
 
