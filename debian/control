@@ -5,7 +5,7 @@ Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 Build-Depends: cmake,
                cmake-extras (>= 1.1),
                dbus,
-               debhelper (>= 9), 
+               debhelper (>= 9),
                dh-translations,
                gcovr,
                intltool,
@@ -27,7 +27,7 @@ Build-Depends: cmake,
                python3-dbusmock,
 # for 12h/24h locale unit tests:
                locales,
-               language-pack-touch-en | language-pack-en-base,
+               language-pack-en-base,
 # for running live EDS tests:
                evolution-data-server,
                gvfs-daemons,
@@ -51,18 +51,15 @@ Vcs-Browser: https://bazaar.launchpad.net/~indicator-applet-developers/indicator
 
 Package: indicator-datetime
 Architecture: any
-Depends: ${shlibs:Depends}, 
+Depends: ${shlibs:Depends},
          ${misc:Depends},
          gsettings-ubuntu-schemas (>= 0.0.7),
          indicator-common,
-         systemd | systemd-shim,
+         systemd,
 Recommends: indicator-applet | indicator-renderer,
             evolution-data-server,
             geoclue-ubuntu-geoip | geoclue-provider,
-            unity-control-center (>= 14.04.3) | ubuntu-system-settings,
+            unity-control-center (>= 14.04.3) | gnome-control-center,
             ubuntu-touch-sounds,
-Suggests: click,
-Conflicts: indicator-datetime (<< 13.10.0)
-Replaces: indicator-datetime (<< 13.10.0)
 Description: Simple clock
  A simple clock appearing in the indicator bar
