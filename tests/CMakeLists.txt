@@ -40,6 +40,7 @@ function(add_test_by_name name)
   set (COVERAGE_TEST_TARGETS ${COVERAGE_TEST_TARGETS} ${TEST_NAME} PARENT_SCOPE)
   add_executable (${TEST_NAME} ${TEST_NAME}.cpp gschemas.compiled)
   add_test (${TEST_NAME} ${TEST_NAME})
+  set_tests_properties(${TEST_NAME} PROPERTIES ENVIRONMENT "XDG_DATA_DIRS=${CMAKE_CURRENT_SOURCE_DIR}/data:/usr/share")
   target_link_libraries (${TEST_NAME} indicatordatetimeservice ${DBUSTEST_LIBRARIES} ${SERVICE_DEPS_LIBRARIES} ${GTEST_LIBRARIES} ${GMOCK_LIBRARIES})
 endfunction()
 add_test_by_name(test-datetime)
@@ -86,7 +87,8 @@ function(add_eds_ics_test_by_name name)
             ${TEST_NAME}                                           # arg3: test name
             ${CMAKE_CURRENT_SOURCE_DIR}/test-eds-ics-config-files  # arg4: base directory for config file template
             ${CMAKE_CURRENT_BINARY_DIR}/${TEST_NAME}.ics           # arg5: the ical file for this test
-            ${CMAKE_CURRENT_SOURCE_DIR}/accounts.db)               # arg6: online accounts database
+            ${CMAKE_CURRENT_SOURCE_DIR}/accounts.db                # arg6: online accounts database
+            ${CMAKE_CURRENT_SOURCE_DIR}/data)                      # arg7: data dir
 endfunction()
 add_eds_ics_test_by_name(test-eds-ics-all-day-events)
 add_eds_ics_test_by_name(test-eds-ics-repeating-events)
