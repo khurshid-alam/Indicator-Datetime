@@ -1,3 +1,15 @@
+indicator-datetime (15.10+17.10.20170829.2-0ubuntu1) artful; urgency=medium
+
+  [ Andrea Azzarone ]
+  * Drop the dependency from ubuntu-app-launch.
+  * Use 30-jun instaed of 31-jun.
+
+  [ Marco Trevisan (Treviño) ]
+  * tests: add fake calendar desktop and icon files so that they can be
+    used at testing time
+
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Tue, 29 Aug 2017 15:37:23 +0000
+
 indicator-datetime (15.10+17.10.20170606-0ubuntu1) artful; urgency=medium
 
   [ Dimitri John Ledkov ]
