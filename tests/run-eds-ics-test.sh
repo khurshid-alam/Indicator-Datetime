@@ -7,6 +7,7 @@ TEST_NAME=$3   # test name
 CONFIG_DIR=$4  # config files
 ICS_FILE=$5    # ical file holding test data
 ACCOUNTS_DB=$6 # online account database
+DATA_DIR=$7    # data dir
 
 echo "this script: ${SELF}"
 echo "test-runner: ${TEST_RUNNER}"
@@ -34,6 +35,7 @@ export XDG_PICTURES_DIR=${TEST_TMP_DIR}
 export XDG_PUBLICSHARE_DIR=${TEST_TMP_DIR}
 export XDG_TEMPLATES_DIR=${TEST_TMP_DIR}
 export XDG_VIDEOS_DIR=${TEST_TMP_DIR}
+export XDG_DATA_DIRS=$(dirname ${TEST_EXEC}):${DATA_DIR}:/usr/share
 export QORGANIZER_EDS_DEBUG=On
 export GIO_USE_VFS=local # needed to ensure GVFS shuts down cleanly after the test is over
 
