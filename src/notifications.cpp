@@ -24,9 +24,6 @@
 #include <messaging-menu/messaging-menu-app.h>
 #include <messaging-menu/messaging-menu-message.h>
 
-#include <libubuntu-app-launch-3/ubuntu-app-launch/appid.h>
-#include <libubuntu-app-launch-3/ubuntu-app-launch/registry.h>
-
 #include <uuid/uuid.h>
 
 #include <gio/gdesktopappinfo.h>
@@ -36,7 +33,6 @@
 #include <string>
 #include <vector>
 #include <memory>
-
 
 namespace unity {
 namespace indicator {
@@ -461,13 +457,7 @@ private:
 
     static std::string calendar_app_id()
     {
-        auto registry = std::make_shared<ubuntu::app_launch::Registry>();
-        auto app_id = ubuntu::app_launch::AppID::discover(registry, "ubuntu-calendar-app");
-        if (!app_id.empty())
-            // Due the use of old API by messaging_menu we need append a extra ".desktop" to the app_id.
-            return std::string(app_id) + ".desktop";
-        else
-            return std::string();
+        return "org.gnome.Calendar.desktop";    
     }
 
     static std::string calendar_app_icon()
