@@ -52,7 +52,7 @@ TEST_F(VAlarmFixture, MissingTriggers)
     // make a planner that looks at the first half of 2015 in EDS
     auto planner = std::make_shared<SimpleRangePlanner>(engine, tz);
     const DateTime range_begin {gtz, 2015,1, 1, 0, 0, 0.0};
-    const DateTime range_end   {gtz, 2015,6,31,23,59,59.5};
+    const DateTime range_end   {gtz, 2015,6,30,23,59,59.5};
     planner->range().set(std::make_pair(range_begin, range_end));
 
     // give EDS a moment to load
@@ -87,7 +87,7 @@ TEST_F(VAlarmFixture, MissingTriggers)
     a.uid = "20150617T211913Z-6217-32011-2036-5@ubuntu-phablet";
     a.summary = "Recurring Alarm";
     a.alarms[0].text = a.summary;
-    std::array<DateTime,14> recurrences {
+    std::array<DateTime,13> recurrences {
         DateTime{ gtz, 2015, 6, 18, 10, 1, 0 },
         DateTime{ gtz, 2015, 6, 19, 10, 1, 0 },
         DateTime{ gtz, 2015, 6, 20, 10, 1, 0 },
@@ -101,7 +101,6 @@ TEST_F(VAlarmFixture, MissingTriggers)
         DateTime{ gtz, 2015, 6, 28, 10, 1, 0 },
         DateTime{ gtz, 2015, 6, 29, 10, 1, 0 },
         DateTime{ gtz, 2015, 6, 30, 10, 1, 0 },
-        DateTime{ gtz, 2015, 7,  1, 10, 1, 0 }
     };
     for (const auto& time : recurrences) {
         a.begin = a.end = a.alarms[0].time = time;
