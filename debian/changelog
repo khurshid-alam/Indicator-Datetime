@@ -1,3 +1,9 @@
+indicator-datetime (15.10+17.10.20170829.2-0ubuntu2) bionic; urgency=medium
+
+  * No-change rebuild for libical soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 09 Dec 2017 17:19:06 +0100
+
 indicator-datetime (15.10+17.10.20170829.2-0ubuntu1) artful; urgency=medium
 
   [ Andrea Azzarone ]

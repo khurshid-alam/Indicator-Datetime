@@ -14,7 +14,7 @@ Build-Depends: cmake,
                libnotify-dev (>= 0.7.6),
                libgstreamer1.0-dev,
                libecal1.2-dev (>= 3.5),
-               libical-dev (>= 1.0),
+               libical-dev,
                libedataserver1.2-dev (>= 3.5),
                liburl-dispatcher1-dev,
                libproperties-cpp-dev,
@@ -47,6 +47,7 @@ Homepage: https://launchpad.net/indicator-datetime
 # and sync up the code again.
 Vcs-Bzr: https://code.launchpad.net/~indicator-applet-developers/indicator-datetime/trunk.16.10
 Vcs-Browser: https://bazaar.launchpad.net/~indicator-applet-developers/indicator-datetime/trunk.16.10/files
+X-Ubuntu-Use-Langpack: yes
 
 Package: indicator-datetime
 Architecture: any
