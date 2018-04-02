@@ -1,3 +1,10 @@
+indicator-datetime (15.10+17.10.20170829.2-0ubuntu4) bionic; urgency=medium
+
+  * Add "X-Ubuntu-Use-Langpack: yes" to debian/control now that this package is
+    in Universe (LP: #1760435).
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 01 Apr 2018 20:11:02 -0500
+
 indicator-datetime (15.10+17.10.20170829.2-0ubuntu3) bionic; urgency=medium
 
   * No change rebuild for evolution-data-server transition
