@@ -232,7 +232,7 @@ protected:
 
         auto upcoming = get_display_appointments(
             m_state->calendar_upcoming->appointments().get(),
-            begin
+            calendar_day.start_of_day()
         );
 
         if (m_upcoming != upcoming)
